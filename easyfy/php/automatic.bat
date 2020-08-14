@@ -1,0 +1,1 @@
+# automatic.bat php C:\\xampp\\htdocs\\Easyfy\\php\\run.php

@@ -1,0 +1,138 @@
+body{
+	color: #ff7878;
+	font-size: 60px;
+	margin: 0;
+	padding: 0;
+
+}
+
+#day-teller{
+	margin-left: 2%;
+}
+
+.card{
+	width: 92%;
+	display: block;
+	margin: 0% auto; 
+	color: #fff;
+	min-height: 230px;
+	font-family: Segoe UI,Frutiger,Frutiger Linotype,Dejavu Sans,Helvetica Neue,Arial,sans-serif;
+}
+
+.card-child-right{
+	background: #ff7878;
+	border-bottom-right-radius: 50px;
+	border-top-right-radius: 50px;
+	padding: 5%;
+	width: 40%;
+	float: left;
+	text-align: center;
+	min-height: 180px;
+	font-size: 45px
+}
+
+.card-child-left{
+	background: #ff7878;
+	border-bottom-left-radius: 50px;
+	border-top-left-radius: 50px;
+	padding: 5%;
+	width: 40%;
+	float: left;
+	text-align: center;
+	min-height: 180px;
+	font-size: 45px;
+}
+
+.card-child-right img, .card-child-left img{
+	width: 130%;
+	float: left;
+	margin-top: 5px;
+
+}
+
+#curr_month{
+	font-size: 55px;
+	display: block;	
+}
+
+ul{
+	margin-top: 0;
+	text-align: center;
+}
+
+li{
+	width: 11.2%;
+	display: inline-block;
+	padding: 1%;
+	border-top: 2px solid #ff7878;
+	border-bottom: 2px solid #ff7878;
+	margin: -1px;
+	box-sizing: border-box;
+	word-wrap: break-word;
+	font-size: 35px;
+	font-family: Segoe UI,Frutiger,Frutiger Linotype,Dejavu Sans,Helvetica Neue,Arial,sans-serif;
+}
+
+#bottom-calendar {
+	position: absolute;
+	font-size: 55px;
+	bottom: 0;
+	display: none;
+	margin-bottom: -5px;
+	z-index: 999999;
+	background: #ff7878;
+	border-top-left-radius: 70px;
+	border-top-right-radius: 70px;
+
+}
+
+#bottom-calendar li{
+	margin: 4;
+	width: 12%;
+	font-size: 45px;
+	height: 75px;
+	padding: 0;
+	color: #fff;
+}
+
+/*#dates li{
+	margin-right: 20px;
+}*/
+
+#month{
+	font-size: 55px;
+	display: block;
+	margin-left: 60px;
+	color: #fff;
+	
+}
+
+#bottom-navbar{
+	height:150px;
+	width: 100%;
+	left: -2px;
+	border: 2px solid #ff7878;
+	position: fixed;
+	bottom: 0;
+	margin: 0;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: stretch;
+}
+
+#bottom-navbar .child{
+	padding: 2%;
+	font-size: 50px;
+	display: inline;
+	flex-basis: 24%;
+	margin: 0;
+	text-align: center;
+	text-decoration: none;
+	color: #ff7878;
+}
+
+#bottom-navbar .child img{
+	display: block;
+	margin: 0 auto;
+}

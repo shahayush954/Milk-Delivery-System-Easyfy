@@ -1,0 +1,31 @@
+body{
+	margin-left: 5%;
+	margin-right: 5%;
+	width: 80%;
+}
+
+.feedback textarea{
+	display: block;
+	margin-left: 15%;
+	margin-right: 15%;
+	font-size: 40px;
+	position: relative;
+	top: 100px;
+	border:2px solid #ff7878;
+	border-radius: 25px;
+}
+.img1{
+	position: relative;
+	top: 350px;
+	display: block;
+	margin-left: 50%;
+	margin-right: 50%;
+}
+h1{
+	font-size: 80px;
+	position: relative;
+	left: 280px;
+	top: 50px;
+	margin-bottom: 0;
+	color: #ff7878;
+}

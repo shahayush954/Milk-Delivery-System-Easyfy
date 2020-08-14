@@ -1,0 +1,65 @@
+body{
+	margin: 0;
+	padding: 0;
+	color: #ff7878;
+	background: #fff;
+	font-size: 65px;
+	font-family: Segoe UI,Frutiger,Frutiger Linotype,Dejavu Sans,Helvetica Neue,Arial,sans-serif;
+}
+
+.heading{
+	font-size: 75px;
+	font-weight: bold;
+	text-align: center;
+	margin-top: 8%;
+}
+
+.details{
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: stretch;
+	width: 80%;
+	margin: auto;
+	margin-top: 5%;
+}
+
+.details .card{
+	margin: 5% 0;
+	border-radius: 50px;
+	border: 2px solid #ff7878;
+	padding: 5%;
+}
+
+.details .card .title{
+	margin: 0;
+	margin-bottom: 1%;
+	font-weight: bold;
+}
+
+.details .card input{
+	width: 100%;
+	border: none;
+	font-size: 55px;
+	color: #ff7878;
+}
+
+::placeholder{
+	color: #ff7878;
+}
+
+:disabled{
+	background: #fff;
+}
+
+.submit{
+	background: #ff7878;
+	color: #fff;
+	display: block;
+	margin: 2% auto;
+	font-size: 55px;
+	border: 4px solid #ff7878;
+	padding: 2% 4%;
+	border-radius: 50px;
+	display: none;
+}

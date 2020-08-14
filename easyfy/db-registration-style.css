@@ -1,0 +1,27 @@
+body{
+	background: #Ff7878;
+}
+.jumbotron{
+	background-color: #Ff7878;
+	font-family: Segoe UI,Frutiger,Frutiger Linotype,Dejavu Sans,Helvetica Neue,Arial,sans-serif;
+}
+.form-control{
+	border-left:30px;
+}
+.avatar-pic {
+width: 25px;
+}
+.btn {
+	background: white;
+	padding: 2% 5%;
+	background: #fff;
+	border-radius: 80px;
+	border-color: #ff7878;
+}
+.btn:hover{
+	background: white;
+}
+.container{
+	width:auto;
+	background-color: #Ff7878;
+}

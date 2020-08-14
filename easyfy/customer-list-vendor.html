@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Eezyfy</title>
+	<link rel="stylesheet" type="text/css" href="customer-list-style.css">
+</head>
+
+<body>
+	<div class="flex-container">
+		<div class = "container-child">
+			<img src="vendor-img.png">
+		</div>
+		<div class = "container-child" style="margin-top: 4%;">
+			<p>ID: 135981</p>
+			<p>Name: Gaurav</p>
+			<p>Number: 9730620619</p>
+		</div>
+	</div>
+	<img src="filter.png" class = "filter-button" onclick="op()">
+	<a href= "vendor-del-boys.html"><img src="back.png" class = "back-button"></a>
+	<form class = "choices">
+		<div class = "choices-child"><input type="checkbox" checked name="prepaid">PrePaid</div>
+		<div class = "choices-child"><input type="checkbox" checked name="prepaid">PostPaid</div>
+		<div class = "choices-child"><input type="checkbox" checked name="prepaid">Paid</div>
+		<div class = "choices-child"><input type="checkbox" checked name="prepaid">Unpaid</div>
+		<p class="submit" onclick="cl()">Submit</p>
+	</form>
+<ul class = "list">
+	<li class = "parent-list buildin" onclick="javascript:location.href = 'customer-details.html'">
+		<div class = "address">
+			<p class = "flat-no"></p>
+			<p class = "wing"></p>
+			<p class = "building">Building Address</p>
+		</div>	</li>
+	<li class = "parent-list bunglow" onclick="javascript:location.href = 'customer-details.html'">
+		<div class = "address">
+			<p class = "flat-no"></p>
+			<p class = "wing"></p>
+			<p class = "building">Bunglow Address</p>
+		</div>
+	</li>
+	<li class = "parent-list shop" onclick="javascript:location.href = 'customer-details.html'">
+		<div class = "address">
+			<p class = "flat-no"></p>
+			<p class = "wing"></p>
+			<p class = "building">Shop Address</p>
+		</div>
+	</li>
+	<li class = "parent-list chawl" onclick="javascript:location.href = 'customer-details.html'">
+		<div class = "address">
+			<p class = "flat-no"></p>
+			<p class = "wing"></p>
+			<p class = "building">Chawl Address</p>
+		</div>
+	</li>
+
+</ul>
+
+<div id = "top-navbar">
+	<div class = "child" style="padding: 10px;" onclick="showBuilding()">
+		<img src="ICONS/three-buildings.png" width="100" height="100"style="align-self: center;">
+		<label style="font-size: 40px;">Building:80</label>
+	</div>
+	<div class = "child" style="padding: 10px;" onclick="showBunglow()">
+		<img src="ICONS/bungalow-2.png" width="100" height="100" style="align-self: center;">
+		<label style="font-size: 40px;">Bunglow:20</label>
+	</div>
+	<div class = "child" style="padding: 10px;" onclick="showShop()">
+		<img src="ICONS/store.png" width="100" height="100"style="align-self: center;">
+		<label style="font-size: 40px;">Shop:40</label>
+	</div>
+	<div class = "child" style="padding: 10px;" onclick="showChawl()">
+		<img src="ICONS/houses.png" width="100" height="100"style="align-self: center;">
+		<label style="font-size: 40px;">Chawl:60</label>
+	</div>
+</div>
+
+<div class="address">
+	
+</div>
+
+<script type="text/javascript">
+
+	window.onload = function (){
+		showBuilding();
+	}
+
+	op = () => {
+		var x = document.getElementsByClassName("choices");
+		x[0].style.display = "block";
+	}
+
+	cl = () => {
+		var x = document.getElementsByClassName("choices");
+		x[0].style.display = "none";
+	}
+
+	showBunglow = () => {
+		var bunglows = document.getElementsByClassName("bunglow");
+		var buildings = document.getElementsByClassName("buildin");
+		var shops = document.getElementsByClassName("shop");
+		var chawls = document.getElementsByClassName("chawl");
+
+		for(var i = 0; i < bunglows.length; i++) 
+			bunglows[i].style.display = "block";
+
+		for(var i = 0; i < buildings.length; i++) 
+			buildings[i].style.display = "none";
+
+		for(var i = 0; i < shops.length; i++) 
+			shops[i].style.display = "none";
+
+		for(var i = 0; i < chawls.length; i++) 
+			chawls[i].style.display = "none";
+	}
+
+	showShop = () => {
+		var bunglows = document.getElementsByClassName("bunglow");
+		var buildings = document.getElementsByClassName("buildin");
+		var shops = document.getElementsByClassName("shop");
+		var chawls = document.getElementsByClassName("chawl");
+
+		for(var i = 0; i < bunglows.length; i++) 
+			bunglows[i].style.display = "none";
+
+		for(var i = 0; i < buildings.length; i++) 
+			buildings[i].style.display = "none";
+
+		for(var i = 0; i < shops.length; i++) 
+			shops[i].style.display = "block";
+
+		for(var i = 0; i < chawls.length; i++) 
+			chawls[i].style.display = "none";
+	}
+
+	showBuilding = () => {
+		var bunglows = document.getElementsByClassName("bunglow");
+		var buildings = document.getElementsByClassName("buildin");
+		var shops = document.getElementsByClassName("shop");
+		var chawls = document.getElementsByClassName("chawl");
+
+		for(var i = 0; i < bunglows.length; i++) 
+			bunglows[i].style.display = "none";
+
+		for(var i = 0; i < buildings.length; i++) 
+			buildings[i].style.display = "block";
+
+		for(var i = 0; i < shops.length; i++) 
+			shops[i].style.display = "none";
+
+		for(var i = 0; i < chawls.length; i++) 
+			chawls[i].style.display = "none";
+	}
+
+	showChawl = () => {
+		var bunglows = document.getElementsByClassName("bunglow");
+		var buildings = document.getElementsByClassName("buildin");
+		var shops = document.getElementsByClassName("shop");
+		var chawls = document.getElementsByClassName("chawl");
+
+		for(var i = 0; i < bunglows.length; i++) 
+			bunglows[i].style.display = "none";
+
+		for(var i = 0; i < buildings.length; i++) 
+			buildings[i].style.display = "none";
+
+		for(var i = 0; i < shops.length; i++) 
+			shops[i].style.display = "none";
+
+		for(var i = 0; i < chawls.length; i++) 
+			chawls[i].style.display = "block";
+	}
+
+</script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+body{
+	background: #fff;
+}
+.jumbotron{
+	background-color: #fff;
+}
+.form-control{
+	border-left:30px;
+}
+.avatar-pic {
+width: 25px;
+}
+.btn {
+	background: white;
+	padding: 2% 5%;
+	background: #fff;
+	border-radius: 80px;
+
+}
+.btn:hover{
+	background: white;
+}
+.container{
+	width:auto;
+	background-color: #fff;
+}

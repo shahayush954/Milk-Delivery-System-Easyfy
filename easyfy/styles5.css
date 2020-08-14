@@ -1,0 +1,248 @@
+/*common*/
+
+body{
+	background: #ff7878; /*light-gray*/
+	color: #fff;	/*dim-gray*/
+	font-size: 60px;
+	line-height: 1.6em;
+	margin: 0;
+	padding: 20% 5%;
+	text-align: center;
+}
+
+a{
+	text-decoration: none;
+	color: #333;
+	padding: 2% 5%;
+	background: #fff;
+	display: block;
+	margin: 5% auto;
+	width: 60%;
+	text-align: center;
+	border-radius: 80px;
+}
+
+input{
+	margin: 5% auto;
+	background: none;
+	font-size: 50px;
+	text-align: center;
+	outline: none;
+}
+
+/*index.html*/
+
+.main-header{
+	width: 100%;
+}
+
+.main-header img{
+	border-radius: 50%;
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+	height: 300px;
+	width: 300px;
+}
+
+.main-header h1{
+	font: 120px cursive, sans-serif;
+	text-align: center;
+}
+
+.choices p{
+	margin-top: 20%;
+	text-align: center;
+}
+
+.choices a:hover{
+	background: #fff;
+	color: #333;
+}
+
+/*loginPage.html*/
+
+.phone-number input{
+	width: 50%;
+	border: none;
+	border-bottom: 2px solid #fff;
+}
+
+.phone-number .country-code{
+	display: inline;
+	margin: 5% auto;
+	font-size: 50px;
+}
+
+.phone-number .charges-msg{
+	font-weight: bold;
+	width: 80%;
+	margin: 5% auto;
+	font-size: 55px;
+	line-height: 1.3em;
+}
+
+.phone-number button{
+	border: 0;
+	background: transparent;
+}
+
+.phone-number button img{
+	position: relative;
+	bottom: 430px;
+	left: 400px;
+	border-radius: 50%;
+	height: 100px;
+	max-width: 100px;
+	box-shadow: 0px 0px 10px 10px #fff;
+	font: 50px sans-serif;
+
+}
+
+/*otpPage.html*/
+
+.accept-otp{
+	width: 70%;
+	margin: 5% auto;
+}
+
+.accept-otp p{
+	font-size: 38px;
+	line-height: 1.3em;
+}
+
+.accept-otp input{
+	background: #ff9999;
+	border: none;
+	width: 50%;
+	padding: 2% 5%;
+	margin-top: 10%;
+}
+
+.accept-otp .verify{
+	font-size: 55px;
+	margin-top: 20%;
+}
+
+.accept-otp .resend{
+	font-size: 55px;
+	margin-top: 5%;
+}
+
+/*vendor-registration.html*/
+
+.vendor img{
+	display: inline;
+	border-radius: 50%;
+	margin: 10% auto 2% auto;
+	width: 350px;
+	height: 350px;
+
+}
+
+
+
+.vendor input[type="text"]{
+	background: #fff;
+	width: 30%;
+	padding: 10px 6%;
+	text-align: left;
+	margin: 2%;
+    border: none;
+	border-bottom: 5px solid #ff7878;
+}
+
+.vendor input[type="radio"]  {
+  width: 37px;
+  height: 45px;
+  display: inline;
+  margin-right: 15px;
+  background: #ff7878;
+}
+
+
+.vendor button{
+	border: 0;
+	background: transparent;
+}
+
+.vendor button img{
+	border-radius: 50%;
+	height: 140px;
+	max-width: 140px;
+    margin: 40% 0% auto;
+}
+
+.vendor a{
+	background: #fff;
+	margin: 0% auto;
+	padding: 0;
+}
+
+.vendor h1{
+	font-size: 80px;
+	font-family: Segoe UI,Frutiger,Frutiger Linotype,Dejavu Sans,Helvetica Neue,Arial,sans-serif;
+}
+
+.vendor #myFileInput{
+	display: none;
+}
+
+
+
+/*milk-details*/
+
+.collapsible {
+  background-color: #777;
+  color: #fff;
+  cursor: pointer;
+  padding: 2%;
+  margin: 3%;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 45px;
+}
+
+.active, .collapsible:hover {
+  background-color: #555;
+}
+
+.collapsible:after {
+  content: '\002B';
+  color: white;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2212";
+}
+
+.content {
+  padding: 0 18px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  background-color: transparent;
+  float: left;
+  margin-left: 2%;
+}
+
+.content p{
+	margin-top: 0;
+	padding: 0;
+	display: inline;
+	font-size: 65px;
+}
+
+.content select{
+	margin-left: 0%;
+	font-size: 60px;
+}
+
+.arrowButton{
+	border-color: black;
+}

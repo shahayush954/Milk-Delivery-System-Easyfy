@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Eezyfy</title>
+	<link rel="stylesheet" type="text/css" href="styles5.css">
+	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript">
+		window.onload = function(){
+	document.getElementById("building").style.display = 'block';
+	document.getElementById("bunglow").style.display = 'none';
+	document.getElementById("Shop").style.display = 'none';
+	document.getElementById("chawl").style.display = 'none';
+}
+		function justTest(){
+			document.getElementById("building").style.display = 'block';
+	        document.getElementById("bunglow").style.display = 'none';
+	        document.getElementById("Shop").style.display = 'none';
+	        document.getElementById("chawl").style.display = 'none';
+		}
+		function justTest1(){
+            document.getElementById("building").style.display = 'none';
+	        document.getElementById("bunglow").style.display = 'block';
+	        document.getElementById("Shop").style.display = 'none';
+	        document.getElementById("chawl").style.display = 'none';
+		}
+		function justTest2(){
+            document.getElementById("building").style.display = 'none';
+	        document.getElementById("bunglow").style.display = 'none';
+	        document.getElementById("Shop").style.display = 'block';
+	        document.getElementById("chawl").style.display = 'none';
+		}
+		function justTest3(){
+            document.getElementById("building").style.display = 'none';
+	        document.getElementById("bunglow").style.display = 'none';
+	        document.getElementById("Shop").style.display = 'none';
+	        document.getElementById("chawl").style.display = 'block';
+		}
+		function readURL(input) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+
+                reader.onload = function (e) {
+                    $('#blah')
+                        .attr('src', e.target.result)
+                        .width(300)
+                        .height(300);
+                };
+
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+
+	</script>
+</head>
+<body class = "vendor" style="background-color: #fff;" >
+	<!--ENTER NAME OF PHP FILE BELOW!!!!!-->
+	<!--<form submit = "POST" action = "">-->
+		<h1 style = "margin-top: -80px ; color: #Ff7878;">Register</h1>
+		<form method="POST" action="php/registerCustomer.php" enctype="multipart/form-data">
+			<!--<img src="vendor-img.png" style="position: relative; bottom: 55px;">-->			
+				
+		<input type="file" id="myFileInput" name="customer-image" onchange="readURL(this)">
+		
+		<a class = "choose-button" onclick="document.getElementById('myFileInput').click()" >
+			<img src="vendor-img.png" id="blah" style="position: relative; bottom: 55px;width: 300px;height: 300px;"></a>
+		
+		<input type="text" name="c-name" placeholder="Full Name" style="width: 70%; ">
+		
+		<div style="display: inline-block;" style="width:30%;">
+		<input name="residence" type="radio" checked="checked" onclick="justTest()" value="Building"/><span style="color:#ff7878; font-size: 80%;">Building</span>
+		<input name="residence" type="radio"  onclick="justTest1()" value="Bungalow"/><span style="color: #ff7878; font-size: 80%;">Bunglow</span>
+        
+        <input name="residence" type="radio" onclick="justTest2()" value="Shop"/><span style="color: #ff7878; font-size:80%;"> Shop </span>
+        <input name="residence" type="radio" onclick="justTest3()" value="Chawl"/><span style="color: #ff7878; font-size:80%;"> Chawl </span>
+        </div> 
+ 
+
+        <!--<input type="text" name="vendor-area" placeholder="Area">-->
+        <div id="building" >
+		<input type="text" name="cb-flat" placeholder="Flat no">
+		<input type="text" name="cb-wing" placeholder="Wing">
+		<input type="text" name="cb-bname" placeholder="Bldg name" style="width:75%;">
+		<input type="text" name="cb-area" placeholder="Area">
+		<input type="text" name="cb-city" placeholder="City">
+		<input type="text" name="cb-state" placeholder="State">
+		<input type="text" name="cb-pincode" placeholder="Pin code">
+	    </div>
+
+	    <div id="bunglow">
+		<input type="text" name="cbb-bbno" placeholder="Bung no.">
+		<input type="text" name="cbb-bbname" placeholder="Bung name">
+		<input type="text" name="cbb-area" placeholder="Area" style="width:75%;">
+		<input type="text" name="cbb-city" placeholder="City" style="width:75%;">
+		<input type="text" name="cbb-state" placeholder="State">
+		<input type="text" name="cbb-pincode" placeholder="Pin code">
+	    </div>
+
+
+	    <div id="Shop">
+        <input type="text" name="cs-sno" placeholder="Shop no.">
+		<input type="text" name="cs-sname" placeholder="Shop name">
+		<input type="text" name="cs-area" placeholder="Area" style="width:75%;">
+		<input type="text" name="cs-city" placeholder="City" style="width:75%;">
+		<input type="text" name="cs-state" placeholder="State">
+		<input type="text" name="cs-pincode" placeholder="Pin code">
+	    </div>
+
+	    <div id="chawl">
+        <input type="text" name="cc-room" placeholder="Room no.">
+		<input type="text" name="cc-cname" placeholder="Chawl name">
+		<input type="text" name="cc-area" placeholder="Area" style="width:75%;">
+		<input type="text" name="cc-city" placeholder="City" style="width:75%;">
+		<input type="text" name="cc-state" placeholder="State">
+		<input type="text" name="cc-pincode" placeholder="Pin code">
+	    </div>
+
+
+
+		<button type = "submit" onclick="window.location.href='delivery1.html';">
+			<img src="right-arrow.png" alt = "submit">
+		</button>
+	</form>
+	<!--</form>-->
+<!--    <div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog"> -->
+
+    <!-- Modal content-->
+    <!--<div class="modal-content">
+      <div class="modal-body">
+
+      <p style = "font-size: 50px;">Add Photo</p>
+
+      <input type="file" style="background: #fff; font-size: 45px; display: inline-flex;">
+      
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" style="font-size: 50px;">Close</button>
+      </div>
+    </div>-->
+
+  </div>
+</div></body>
+</html>

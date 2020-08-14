@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Eezyfy</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="vendor-notif-styles.css">
+</head>
+<script type="text/javascript">
+	$(document).ready(function(){
+
+		function load_unseen_notification(view=''){
+			$.ajax({
+				url:"php/fetch.php",
+				method:"POST",
+				data:{view:view},
+				dataType:"json",
+				success:function(data){
+					$('.notifications').html(data.notification);
+					$('.count').html(data.unseen_notification);
+				}
+
+			});
+		}
+
+		function load_request(request=''){
+			$.ajax({
+				url:"php/fetch.php",
+				method:"POST",
+				data:{request:request},
+				dataType:"json",
+				success:function(data){
+					$('.all-requests').html(data.approve_request);
+					$('.request-count').html(data.unseen_request);
+				}
+			});
+		}
+
+
+		openRequests = () => {
+			var notifs = document.getElementById("notifs");
+			var requests = document.getElementById("requests");
+			var notifOpt = document.getElementById("notif-opt");
+			var reqOpt = document.getElementById("req-opt");
+			var reqCount=document.getElementById("request-count");
+			var notifCount=document.getElementById("notif-count");
+			reqCount.style.color="#ff7878";
+			reqCount.style.background="#fff";
+			notifCount.style.background="#ff7878";
+			notifCount.style.color="#fff";
+			notifs.style.display = "none";
+			notifOpt.style.background = "#fff";
+			requests.style.display = "block";
+			reqOpt.style.background = "#ff7878";
+			reqOpt.style.color = "#fff";
+			notifOpt.style.color="#ff7878";
+		}
+
+		openNotifs = () => {
+			var notifs = document.getElementById("notifs");
+			var requests = document.getElementById("requests");
+			var notifOpt = document.getElementById("notif-opt");
+			var reqOpt = document.getElementById("req-opt");
+			var reqCount=document.getElementById("request-count");
+			var notifCount=document.getElementById("notif-count");
+			reqCount.style.color="#fff";
+			reqCount.style.background="#ff7878";
+			notifCount.style.background="#fff";
+			notifCount.style.color="#ff7878";
+			notifs.style.display = "block";
+			notifOpt.style.color="#fff";
+			notifOpt.style.background = "#ff7878";
+			requests.style.display = "none";
+			reqOpt.style.background = "#fff";
+			reqOpt.style.color = "#ff7878";
+		}
+
+		load_unseen_notification();
+		load_request();
+	});
+
+	</script>
+<body>
+
+	<div id = "choices-tab"style="font-size: 45px;">
+		<div id = "req-opt" onclick="openRequests()"style="color: #ff7878;";>
+			Requests
+			<div id="request-count" class = "request-count">0</div>			
+		</div>
+		<div id = "notif-opt" onclick="openNotifs()"style="color: #fff;">
+			Notifications
+			<div id="notif-count" class = "count">0</div>
+		</div>
+	</div>
+	
+	<div id = "notifs">
+		<ul class="notifications">
+			<!--<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</li>
+			<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</li>
+			<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</li>
+			<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</li>
+			<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</li>-->			
+		</ul>
+	</div>
+	
+	<div id = "requests">
+		<ul class="all-requests">
+			
+			<li class="flex-parent">
+				<div class = "flex-child-img">
+					<img src="customer-icon.png">
+				</div>
+				<div class = "flex-child-details">
+					<p>Name</p>
+					<p>ID</p>
+				</div>
+				<div class="flex-child-requests">
+					<img src="check-button.png"style="width: 105px;height: 105px;">
+					<img src="cancel-button.png"style="width: 105px;height: 105px;">
+				</div>
+			</li>
+			<!-- CUSTOMER BELOW!!! DB ABOVE -->
+			<li class = "flex-parent">
+				<div class = "flex-child-img">
+					<img src="customer-icon.png">
+				</div>
+				<div class = "flex-child-details">
+					<p>Name</p>
+					<p>ID</p>
+				</div>
+				<div class="flex-child-requests">
+					<img src="check-button.png" style="height: 105px;width: 105px;">
+					<img src="cancel-button.png"style="width: 105px;height: 105px;">
+				</div>
+			</li>
+			<!--
+			<li>
+				<div class = "db-details">
+					<img src="customer-icon.png">
+					<p class = "name">First Last</p>
+				</div>
+				<div class="acc-dec">
+					<img src="checked.png">
+					<img src="cancel.png">
+				</div>
+			</li>
+			<li>
+				<div class = "db-details">
+					<img src="customer-icon.png">
+					<p class = "name">First Last</p>
+				</div>
+				<div class="acc-dec">
+					<img src="checked.png">
+					<img src="cancel.png">
+				</div>
+			</li>
+			<li>
+				<div class = "db-details">
+					<img src="customer-icon.png">
+					<p class = "name">First Last</p>
+				</div>
+				<div class="acc-dec">
+					<img src="checked.png">
+					<img src="cancel.png">
+				</div>
+			</li>
+			<li>
+				<div class = "db-details">
+					<img src="customer-icon.png">
+					<p class = "name">First Last</p>
+				</div>
+				<div class="acc-dec">
+					<img src="checked.png">
+					<img src="cancel.png">
+				</div>
+			</li>
+			<li>
+				<div class = "db-details">
+					<img src="customer-icon.png">
+					<p class = "name">First Last</p>
+				</div>
+				<div class="acc-dec">
+					<img src="checked.png">
+					<img src="cancel.png">
+				</div>
+			</li>
+		-->
+		</ul>
+	</div>
+	
+	<div id = "bottom-navbar">
+	<a href="vendor-main-page.php"  style="font-size:35px;"class = "child">
+		<img src="home.png"width="65" height="65" style="align-self: center; margin-bottom: 5px;">
+		<label style="    font-family: Segoe UI,Frutiger,Frutiger Linotype,Dejavu Sans,Helvetica Neue,Arial,sans-serif;">Home</label>
+	</a>
+	<a  href="vendor-notif.html" style="font-size:35px;background-color: #ff7878; color: #fff;"class = "child">
+		<img src="notification_white.png"width="65" height="65" style="align-self: center;margin-bottom: 5px;">
+		<label style="    font-family: Segoe UI,Frutiger,Frutiger Linotype,Dejavu Sans,Helvetica Neue,Arial,sans-serif;">Notifications</label>
+	</a>
+	<a href="vendor-del-boys.php"style="font-size:35px;"class = "child">
+		<img src="delivery-boy-icon.png"width="65" height="65" style="align-self: center;margin-bottom: 5px;">
+		<label style="    font-family: Segoe UI,Frutiger,Frutiger Linotype,Dejavu Sans,Helvetica Neue,Arial,sans-serif;">Delivery Boys</label>
+	</a>
+	<a href="vendor-settings.php" style="font-size:35px;"class = "child">
+		<img src="settings.png"width="65" height="65" style="align-self: center;margin-bottom: 5px;">
+		<label style="    font-family: Segoe UI,Frutiger,Frutiger Linotype,Dejavu Sans,Helvetica Neue,Arial,sans-serif;">Settings</label>
+	</a>
+</div>
+</body>
+</html>

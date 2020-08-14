@@ -1,0 +1,130 @@
+body{
+	color: #Ff7878;
+	    font-family: Segoe UI,Frutiger,Frutiger Linotype,Dejavu Sans,Helvetica Neue,Arial,sans-serif;
+    font-size: 50px;
+    margin:0;
+}
+.back-button{
+	height: 20%;
+}
+.back-button img{
+	float: left;
+	
+}
+
+.date-choser input{
+	font-size: 40px;
+	width: 20%;
+	border: 3px solid #ff7878;
+	border-radius: 20px;
+	color: #ff7878;
+	padding: 1%;
+}
+ 
+hr{
+	position: relative;
+	top: 10px;
+	border-color: #Ff7878;
+	width: 100%;
+}
+.profile-pic{
+	text-align: center;
+	top:70px;
+}
+.profile-pic h1{
+	font-size: 50px;
+}
+.profile-pic img{
+	border-radius: 50%;
+	border:3px solid #ff7878;
+}
+.paid{ 
+	  display: flex;
+  	  flex-wrap: nowrap;
+  	  background-color: #fff;
+  	  justify-content: center;
+  	  border-bottom: 3px solid #Ff7878;
+}
+.paid > div{
+	
+	text-align: center;
+	margin: 30px;
+	padding: 0px;
+}
+.paid > div a:link,a:visited{
+	text-decoration: none;
+	color: #Ff7878;
+	font-size: 50px;
+	background-color: #fff;
+	border: 2px solid #Ff7878;
+	border-radius: 55px;
+	text-align: center;
+	padding: 20px;
+}
+.paid > div a:hover,a:active{
+	background-color: #Ff7878;
+	color: #fff;
+}
+.paid label{
+	font-size: 40px;
+	margin-right: 10px;
+}
+.paid1{
+		  display: flex;
+  	  flex-wrap: nowrap;
+  	  background-color: #fff;
+  	  justify-content: center;
+  	  
+}
+.paid1 > div{
+	
+	text-align: center;
+	margin: 10px;
+	padding: 15px;
+}
+.paid1 input[type='radio']{
+	  position: absolute;
+  	opacity: 0;
+  	width: 0;
+  	height: 0;
+}
+/* CHECKED STYLES */
+.paid1 input[type=radio]:checked + img {
+  outline: 2px solid #Ff7878;
+}
+.paid1 label{
+	font-size: 45px;
+	margin-right: 55px;
+}
+#bottom-navbar{
+	height: 250px;
+	width: 100%;
+	border: 2px solid #ff7878;
+	position: fixed;
+	bottom: 0;
+	z-index: 1;
+	background: #fff;
+	color: #ff7878;
+	margin: 0;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: stretch;
+}
+
+#bottom-navbar .child{
+	border: 2px solid #ff7878;
+	padding: 2%;
+	font-size: 50px;
+	display: inline;
+	flex-basis: 24%;
+	margin: 0;
+	text-align: center;
+	text-decoration: none;
+	color: #ff7878;
+}
+
+#bottom-navbar .child img{
+	display: block;
+	margin: 0 auto;
+}

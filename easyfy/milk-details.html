@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Eezyfy</title>
+	<link rel="stylesheet" type="text/css" href="milk-details-styles.css">
+</head>
+<body>
+	<h1 style = "margin-top: 0">Additional Details</h1>
+	<form action="php/registerMilkDetails.php" method="POST">
+	<div class = "milk-details">
+		<button class="collapsible" type="button">Milk</button>
+		<div class="content" style="margin-top: -25px">
+			<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." name="vendor-brand">
+			<ul id="myUL">
+			  <li id = "Amul" onclick="accept(this.id)"><a href="#">Amul</a></li>
+			  <li id = "Govardhan" onclick="accept(this.id)"><a href="#">Govardhan</a></li>
+			  <li id = "Mother Dairy" onclick="accept(this.id)"><a href="#">Mother Dairy</a></li>
+			  <li id = "Warna" onclick="accept(this.id)"><a href="#">Warna</a></li>
+			</ul>
+			<br><p>Rs.</p>
+			<input type="number" name="vendor-milk-charge" placeholder="cost">
+			<br>
+			<p>Rs.</p>
+			<input type="number" name="vendor-delivery-charge" placeholder="delivery charges">
+			<p>per month</p>
+		</div>
+		<button class="collapsible" type="button">Subscription</button>
+		<div class="content">
+		  	<input type="radio" name="vendor-subscription" value="Prepaid"><label for="sub-type">Prepaid </label> <br>
+		  	<input type="radio" name="vendor-subscription" value="Postpaid"><label for="sub-type">Postpaid </label> <br>
+		  	<input type="radio" name="vendor-subscription" value="Both"><label for="sub-type">Both </label> <br>
+		  
+		</div>
+		<button class="collapsible" type="button">Cutoff Time</button>
+		<div class="content">
+			<input type="text" name="hour" maxlength="2" size="2" placeholder="hh">
+			<p>:</p>
+			<input type="text" name="min" maxlength="2" size="2" placeholder="mm">
+			<select name="ampm">
+				<option value="PM">PM</option>
+				<option value="AM">AM</option>
+			</select>
+		</div>
+		<button class = "submit-btn" type="submit">Submit
+		</button>
+	</div>
+	</form>
+
+<script>
+	var coll = document.getElementsByClassName("collapsible");
+	var i;
+
+	for (i = 0; i < coll.length; i++) {
+	  coll[i].addEventListener("click", function() {
+	    this.classList.toggle("active");
+	    var content = this.nextElementSibling;
+	    if (content.style.maxHeight){
+	      content.style.maxHeight = null;
+	    } else {
+	      content.style.maxHeight = content.scrollHeight + "px";
+	    } 
+	  });
+	}
+
+	window.onload = function(){
+		document.getElementById('myUL').style.display = "none";
+		document.getElementById('plusIcon').style.display = "none";
+	}
+
+	function abortList(){
+		document.getElementById('myUL').style.display = "none";
+	}
+
+	function myFunction() {
+	  // Declare variables
+	  var input, filter, ul, li, a, i, txtValue;
+	  input = document.getElementById('myInput');
+	  filter = input.value.toUpperCase();
+	  ul = document.getElementById("myUL");
+	  li = ul.getElementsByTagName('li');
+
+	document.getElementById('myUL').style.display = "block";
+
+		var someValuePresent = false;
+	  	// Loop through all list items, and hide those who don't match the search query
+		for (i = 0; i < li.length; i++) {
+			a = li[i].getElementsByTagName("a")[0];
+			txtValue = a.textContent || a.innerText;
+			if (txtValue.toUpperCase().indexOf(filter) == 0) {
+				li[i].style.display = "";
+				someValuePresent = true;
+			}
+			else {
+				li[i].style.display = "none";
+			}
+		}
+
+		if (!someValuePresent) {
+			document.getElementById('plusIcon').style.display = "";
+		}
+		else{
+			document.getElementById('plusIcon').style.display = "none";
+		}
+	}
+
+	function accept(clicked_id){
+		document.getElementById('myInput').value = (clicked_id);
+		abortList();
+	}
+
+</script>
+
+</body>
+</html>

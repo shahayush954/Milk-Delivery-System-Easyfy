@@ -1,0 +1,132 @@
+body{
+	color: #ff7878;
+	font-size: 60px;
+	margin: 0;
+	padding: 0;
+}
+
+
+#curr_month{
+	font-size: 55px;
+	display: block;	
+}
+
+ul{
+	margin-top: 0;
+	text-align: center;
+}
+
+li{
+	    color: #ff7878;
+    width: 11.2%;
+    display: inline-block;
+    padding: 1%;
+    border-top: 2px solid #ff7878;
+    border-bottom: 2px solid #ff7878;
+    margin: -1px;
+    box-sizing: border-box;
+    word-wrap: break-word;
+    font-size: 35px;
+    font-family: Segoe UI,Frutiger,Frutiger Linotype,Dejavu Sans,Helvetica Neue,Arial,sans-serif;
+}
+
+#bottom-calendar {
+	position: absolute;
+	font-size: 55px;
+	bottom: 0;
+	display: none;
+	margin-bottom: -5px;
+	z-index: 999999;
+	background: #ff7878;
+	border-top-left-radius: 70px;
+	border-top-right-radius: 70px;
+
+}
+
+#bottom-calendar li{
+	margin: 4;
+	width: 12%;
+	font-size: 45px;
+	height: 75px;
+	padding: 0;
+	color: #fff;
+}
+
+/*#dates li{
+	margin-right: 20px;
+}*/
+
+#month{
+	font-size: 55px;
+	display: block;
+	margin-left: 60px;
+	color: #fff;
+}
+
+#bottom-navbar{
+	height: 150px;
+	width: 100%;
+	border: 2px solid #ff7878;
+	position: fixed;
+	left: -2px;
+	bottom: 0;
+	margin: 0;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: stretch;
+}
+
+#bottom-navbar .child{
+	padding: 2%;
+	font-size: 50px;
+	display: inline;
+	flex-basis: 24%;
+	margin: 0;
+	text-align: center;
+	text-decoration: none;
+	color: #ff7878;
+}
+
+#bottom-navbar .child img{
+	display: block;
+	margin: 0 auto;
+}
+.detailss{
+	display: block;
+	margin-right: auto;
+	margin-left: auto;
+	margin-top: 5%;
+	width: 80%;
+	border:2px solid #ff7878;
+	border-radius: 25px;
+}
+.detailss img{
+	display: block;
+	margin-right: auto;
+	margin-left: auto;
+}
+.inline{
+	display: block;
+	padding-bottom: 40px;
+	margin-top: 30px;
+
+}
+.inline img{
+	display: inline;
+
+}
+.detailss1{
+	display: block;
+	margin-right: auto;
+	margin-left: auto;
+	margin-top: 5%;
+	width: 80%;
+	border:2px solid #ff7878;
+	border-radius: 25px;
+}
+.detailss1 img{
+	margin-right: auto;
+	margin-left: auto;
+}
+

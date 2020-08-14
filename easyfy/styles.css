@@ -1,0 +1,208 @@
+/*common*/
+
+body{
+	background: #ff7878; /*light-gray*/
+	color: #fff;	/*dim-gray*/
+	font-size: 50px;
+	line-height: 1.6em;
+	margin: 0;
+	padding: 10% 0;
+	text-align: center;
+	font-family: Segoe UI,Frutiger,Frutiger Linotype,Dejavu Sans,Helvetica Neue,Arial,sans-serif;
+}
+
+a{
+	text-decoration: none;
+	color: #333;
+	padding: 2% 5%;
+	background: #fff;
+	display: block;
+	margin: 5% auto;
+	width: 60%;
+	text-align: center;
+	border-radius: 80px;
+}
+
+input{
+	margin: 5% auto;
+	background: none;
+	font-size: 60px;
+	text-align: center;
+	outline: none;
+}
+
+/*index.html*/
+
+.main-header{
+	width: 100%;
+}
+
+.main-header img{
+	border-radius: 50%;
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+	height: 500px;
+	width: 500px;
+}
+
+.main-header h1{
+	font: 120px cursive, sans-serif;
+	text-align: center;
+}
+
+.choices p{
+	margin-top: 20%;
+	text-align: center;
+}
+
+.choices a:hover{
+	background: #fff;
+	color: #333;
+}
+
+
+/*otpPage.html*/
+
+.accept-otp{
+
+	width: 70%;
+	margin: 5% auto;
+}
+
+.accept-otp p{
+	font-size: 38px;
+	line-height: 1.3em;
+	font-family: Segoe UI,Frutiger,Frutiger Linotype,Dejavu Sans,Helvetica Neue,Arial,sans-serif;
+}
+
+.accept-otp input{
+	border: none;
+	width: 60%;
+	padding: 2% 5%;
+	margin-top: 10%;
+	    border-bottom: 2px solid #fff;
+	    color: white;
+}
+
+.accept-otp .verify{
+	margin-top: 20%;
+	font-color:#ff7878;
+	width:90%;
+	
+}
+
+.accept-otp .resend{
+	margin-top: 5%;
+	width:90%;
+}
+
+/*vendor-registration.html*/
+
+.vendor img{
+	display: inline;
+	border-radius: 50%;
+	width: 300px;
+	height: 300px;
+}
+
+
+
+.vendor input{
+	background: transparent;
+	border: none;
+	border-bottom: 2px solid white;
+	width: 70%;
+	padding: 2% 2%;
+	text-align: left;
+	color: #fff;
+	display: block;
+}
+
+
+  </style>
+}
+
+.vendor ::placeholder{
+	color: #fff;
+	opacity: 1;
+}
+
+.vendor button{
+	border: 0;
+	margin-top: 5%;
+	background: transparent;
+}
+
+.vendor button img{
+	border-radius: 50%;
+    height: 150px;
+    max-width: 150px;
+}
+
+.vendor a{
+	background: #ff7878;
+	margin: 2% auto;
+	padding: 0;
+}
+
+.vendor P{
+	font-size: 80px;
+}
+
+.vendor #myFileInput{
+	display: none;
+}
+
+/*milk-details*/
+
+.collapsible {
+  background-color: #777;
+  color: #fff;
+  cursor: pointer;
+  padding: 2%;
+  margin: 3%;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 45px;
+}
+
+.active, .collapsible:hover {
+  background-color: #555;
+}
+
+.collapsible:after {
+  content: '\002B';
+  color: white;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2212";
+}
+
+.content {
+  padding: 0 18px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  background-color: transparent;
+  float: left;
+  margin-left: 2%;
+}
+
+.content p{
+	margin-top: 0;
+	padding: 0;
+	display: inline;
+	font-size: 65px;
+}
+
+.content select{
+	margin-left: 0%;
+	font-size: 60px;
+}

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Eezyfy</title>
+	<link rel="stylesheet" type="text/css" href="styles.css">
+  <style>
+    input::placeholder{
+      color:#F0F0F0;
+    }
+  </style>
+  <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+</head>
+<script type="text/javascript">
+	
+	function readURL(input) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+
+                reader.onload = function (e) {
+                    $('#blah')
+                        .attr('src', e.target.result)
+                        .width(300)
+                        .height(300);
+                };
+
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+
+</script>
+
+<body class = "vendor">
+	<!--ENTER NAME OF PHP FILE BELOW!!!!!-->
+	<form method = "POST" action = "php/registerDetails.php" enctype= "multipart/form-data">
+		<P style = "margin-top: 0">Register</P>
+
+		<input type="file" id="myFileInput" onchange="readURL(this)" name="vendor-image">
+		
+		<a class = "choose-button" onclick="document.getElementById('myFileInput').click()" style="width:300px; height:300px;">
+		<img src="vendor-img.png" id="blah" required></a>
+		
+		<input type="text" name="vendor-name" placeholder="Full Name">
+		<input type="text" name="vendor-plot" placeholder="Plot No.">
+		<input type="text" name="vendor-area" placeholder="Area">
+		<input type="text" name="vendor-city" placeholder="City">
+		<input type="text" name="vendor-state" placeholder="State">
+		<button type = "submit" onclick="window.location.href='milk-details.html';">
+			<img src="right-arrow-white.png" alt = "submit">
+		</button>
+	</form>
+<!--    <div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog"> -->
+
+    <!-- Modal content-->
+    <!--<div class="modal-content">
+      <div class="modal-body">
+
+      <p style = "font-size: 50px;">Add Photo</p>
+
+      <input type="file" style="background: #fff; font-size: 45px; display: inline-flex;">
+      
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" style="font-size: 50px;">Close</button>
+      </div>
+    </div>-->
+
+  </div>
+</div></body>
+</html>

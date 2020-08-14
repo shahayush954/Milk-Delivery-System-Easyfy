@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Eezyfy</title>
+	<link rel="stylesheet" type="text/css" href="customer-notif.css">
+	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+</head>
+<script type="text/javascript">
+	$(document).ready(function(){
+
+		function load_unseen_notification(view=''){
+			$.ajax({
+				url:"php/customer-fetch.php",
+				method:"POST",
+				data:{view:view},
+				dataType:"json",
+				success:function(data){
+					$('.req').html(data.req);
+					$('.count').html(data.count);
+				}
+
+			});
+		}
+
+		load_unseen_notification();
+
+	});
+</script>
+
+<body>
+
+	<div id = "choices-tab" style="font-size: 45px;">
+		<div id = "notif-opt" onclick="openNotifs()" style="color: #fff;">
+			Notifications
+			<div class = "count" style="color: #ff7878;">0</div>
+		</div>
+
+	</div>
+	
+	<div id = "notifs">
+		<ul class="req">
+			<!--<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</li>
+			<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</li>
+			<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</li>
+			<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</li>
+			<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</li>-->			
+		</ul>
+	</div>
+	
+	<div id = "requests">
+		<ul>
+			<li>
+				<div class = "db-details">
+					<img src="customer-icon.png">
+					<p class = "name">First Last</p>
+				</div>
+				<div class="acc-dec">
+					<img src="checked.png">
+					<img src="cancel.png">
+				</div>
+			</li>
+			<li>
+				<div class = "db-details">
+					<img src="customer-icon.png">
+					<p class = "name">First Last</p>
+				</div>
+				<div class="acc-dec">
+					<img src="checked.png">
+					<img src="cancel.png">
+				</div>
+			</li>
+			<li>
+				<div class = "db-details">
+					<img src="customer-icon.png">
+					<p class = "name">First Last</p>
+				</div>
+				<div class="acc-dec">
+					<img src="checked.png">
+					<img src="cancel.png">
+				</div>
+			</li>
+			<li>
+				<div class = "db-details">
+					<img src="customer-icon.png">
+					<p class = "name">First Last</p>
+				</div>
+				<div class="acc-dec">
+					<img src="checked.png">
+					<img src="cancel.png">
+				</div>
+			</li>
+			<li>
+				<div class = "db-details">
+					<img src="customer-icon.png">
+					<p class = "name">First Last</p>
+				</div>
+				<div class="acc-dec">
+					<img src="checked.png">
+					<img src="cancel.png">
+				</div>
+			</li>
+			<li>
+				<div class = "db-details">
+					<img src="customer-icon.png">
+					<p class = "name">First Last</p>
+				</div>
+				<div class="acc-dec">
+					<img src="checked.png">
+					<img src="cancel.png">
+				</div>
+			</li>
+		</ul>
+	</div>
+	
+	<div id = "bottom-navbar">
+		<a class = "child" href="customer-after-ordering.php">
+			<img src="home.png" width="65" height="65"style="align-self: center; margin-bottom: 5px;">
+		<label style="    font-size: 35px;font-family: Segoe UI,Frutiger,Frutiger Linotype,Dejavu Sans,Helvetica Neue,Arial,sans-serif;">Home</label>
+			
+		</a>
+		<a class = "child" href="customer-notif.html" style="background-color: #ff7878; color: #fff;">
+			<img src="notification_white.png" width="65" height="65"style="align-self: center;margin-bottom: 5px;">
+		<label style="font-size: 35px; font-family: Segoe UI,Frutiger,Frutiger Linotype,Dejavu Sans,Helvetica Neue,Arial,sans-serif;">Notificaions</label>
+		</a>
+		<a class = "child" href="bill.php">
+			<img src="statement.png" width="65" height="65"style="align-self: center;margin-bottom: 5px;">
+		<label style="font-size: 35px; font-family: Segoe UI,Frutiger,Frutiger Linotype,Dejavu Sans,Helvetica Neue,Arial,sans-serif;">Bill</label>
+		</a>
+		<a class = "child" href="customer-settings.php">
+			<img src="settings.png" width="65" height="65"style="align-self: center;margin-bottom: 5px;">
+		<label style="   font-size: 35px; font-family: Segoe UI,Frutiger,Frutiger Linotype,Dejavu Sans,Helvetica Neue,Arial,sans-serif;">Settings</label>
+		</a>
+	</div>
+	
+	<script type="text/javascript">
+
+		openRequests = () => {
+			var notifs = document.getElementById("notifs");
+			var requests = document.getElementById("requests");
+			var notifOpt = document.getElementById("notif-opt");
+			var reqOpt = document.getElementById("req-opt");
+			notifs.style.display = "none";
+			notifOpt.style.background = "#fff";
+			requests.style.display = "block";
+			reqOpt.style.background = "#ffc5c5";
+		}
+
+		openNotifs = () => {
+			var notifs = document.getElementById("notifs");
+			var requests = document.getElementById("requests");
+			var notifOpt = document.getElementById("notif-opt");
+			var reqOpt = document.getElementById("req-opt");
+			notifs.style.display = "block";
+			notifOpt.style.background = "#ffc5c5";
+			requests.style.display = "none";
+			reqOpt.style.background = "#fff";
+		}
+
+	</script>
+</body>
+</html>

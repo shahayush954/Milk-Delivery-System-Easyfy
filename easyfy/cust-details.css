@@ -1,0 +1,35 @@
+body{
+	padding:0;
+	margin: 0;
+
+}
+.border-bottom{
+	
+	border-bottom: 2px solid #ff7878;
+
+}
+.border-bottom img{
+	padding-top: 2%;
+	padding-left: 2%;
+}
+
+#done{
+	float: right;
+	margin-right: 2%;
+}
+.cust1{
+	margin-top: 1%;
+	border-bottom: 2px solid #ff7878;
+}
+.cust1 p{
+	display: inline;
+	font-size: 40px;
+	color: #ff7878;
+	margin-left: 5%;
+}
+
+#customer-id{
+text-align: center;
+    display: block;
+    margin: 4% auto;
+}

@@ -1,0 +1,152 @@
+body{
+  background: #ff7878; /*light-gray*/
+  color: #fff;  /*dim-gray*/
+  font-size: 60px;
+  line-height: 1.6em;
+  margin: 0;
+  padding: 10% 0 ;
+      font-family: Segoe UI,Frutiger,Frutiger Linotype,Dejavu Sans,Helvetica Neue,Arial,sans-serif;
+}
+
+.submit-btn{
+  color: #ff7878;
+  padding: 2% 5%;
+  background: #fff;
+  display: block;
+  margin: 5% auto;
+  width: 60%;
+  font-size: 60px;
+  text-align: center;
+  border-radius: 80px;
+}
+
+h1{
+  font-size: 90px;
+  text-align: center;
+}
+
+.collapsible {
+  background-color: #fff;
+  color: #ff7878;
+  cursor: pointer;
+  padding: 2%;
+  margin: 3%;
+  margin-bottom: 5%;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 60px;
+  border-radius: 25px;
+}
+
+.active, .collapsible:hover {
+}
+
+.collapsible:after {
+  content: url(down-collapsible1.png);
+  color: white;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: url(up-collapsible.png);
+}
+
+.content {
+  padding: 0 18px;
+  max-height: 0;
+  overflow: hidden;
+  display: block;
+  transition: max-height 0.2s ease-out;
+  background-color: transparent;
+  float: left;
+  margin-left: 2%;
+  position: relative;
+  margin-top: -25px;
+}
+
+p{
+  text-align: left;
+  display: inline;
+}
+
+::placeholder{
+  color: #ff7878;
+  opacity: 1;
+}
+
+input[type = "number"]{
+  width: 50%;
+  border-radius: 25px;
+}
+
+select, input{
+  font-size: 60px;
+  text-align: center;
+  border-radius: 35px;
+  border-color: #fff;
+  color: #ff7878;
+}
+
+select{
+  padding: 10px 20px;
+}
+
+select {
+  /* for Chrome */
+  -webkit-appearance: none;
+  margin-bottom: 10%;
+}
+
+label{
+}
+
+option{
+  font-size: 15px;
+}
+
+input[type=radio] {
+  width: 50px;
+  height: 50px;
+  display: inline;
+  margin-right: 40px;
+}
+
+#myInput {
+  background-position: 10px 12px; /* Position the search icon */
+  background-repeat: no-repeat; /* Do not repeat the icon image */
+  width: 80%; /* Full-width */
+  //font-size: 40px; /* Increase font-size */
+  padding: 12px 20px 12px 40px; /* Add some padding */
+  border: 1px solid #ddd; /* Add a grey border */
+  margin-bottom: 12px; 
+  border-radius:25px;/* Add some space below the input */
+}
+
+#myUL {
+  /* Remove default list styling */
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  overflow: scroll;
+  position: absolute;
+}
+
+#myUL li a {
+  border: 1px solid #ddd; /* Add a border to all links */
+  margin-top: -1px; /* Prevent double borders */
+  background-color: #f6f6f6; /* Grey background color */
+  padding: 6px 12px; /* Add some padding */
+  text-decoration: none; /* Remove default text underline */
+  font-size: 50px; /* Increase the font-size */
+  color: black; /* Add a black text color */
+  display: block; /* Make it into a block element to fill the whole list */
+}
+
+#myUL li a:hover:not(.header) {
+  background-color: #eee; /* Add a hover effect to all links, except for headers */
+}

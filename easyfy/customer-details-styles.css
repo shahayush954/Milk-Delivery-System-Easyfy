@@ -1,0 +1,93 @@
+body{
+	background:#fff;
+	color: #ff7878;
+	margin: 0;
+	padding: 0;
+	font-size: 38px !important;
+	font-family: Segoe UI,Frutiger,Frutiger Linotype,Dejavu Sans,Helvetica Neue,Arial,sans-serif;
+}
+
+.cust-img img{
+	width: 200px;
+	height: 200px;
+	border: 2px solid #ff7878;
+	border-radius: 50%;
+	display: block;
+	margin: auto;
+	margin-top: 5%;
+}
+
+.details{
+	width: 80%;
+	padding: 3%;
+	border: 2px solid #ff7878;
+	border-radius: 50px;
+	margin: 5% auto;
+}
+
+.details p{
+	display: inline;
+	margin: 0;
+}
+
+.heading{
+	display: block !important;
+	font-size: 60px !important;
+}
+
+.space{
+	height: 20px;
+}
+
+.back-button{
+	position: fixed;
+	top: 25px;
+	left: 15px;
+	width: 60px;
+	height: 60px;
+}
+
+#subscriptions{
+	display: none;
+	border: 2px solid #ff7878;
+	position: fixed;
+	bottom: 23%;
+	width: 30%;
+	left: 46%;
+	font-size: 63px;
+	background: #fff;
+}
+
+#subscriptions p{
+	margin: 0;
+	padding: 2%;
+	border-bottom: 2px solid #ff7878;
+}
+
+#payments{
+	display: none;
+	border: 2px solid #ff7878;
+	position: fixed;
+	bottom: 2.5%;
+	width: 30%;
+	left: 35%;
+	font-size: 63px;
+	background: #fff;
+}
+
+#payments p{
+	margin: 0;
+	padding: 2%;
+	border-bottom: 2px solid #ff7878;
+}
+
+button{
+	display: none;
+	font-size: 50px;
+	background: #ff7878;
+	color: #fff;
+	border: 2px solid #ff7878;
+	padding: 2% 4%;
+	border-radius: 50px;
+	margin: auto;	
+}

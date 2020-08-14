@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Eezyfy</title>
+	<link rel="stylesheet" type="text/css" href="loginPage.css">
+
+	<style>
+		.charges-msg{
+			font-family: Segoe UI,Frutiger,Frutiger Linotype,Dejavu Sans,Helvetica Neue,Arial,sans-serif; 
+		}
+		.phone-number{
+			margin-top: 350px;
+		}
+
+	</style>
+</head>
+<body>
+	<a href="index.html"><img src="back_white.png" width="60" height="60"></a>
+	<header class = "main-header">
+		<img src="logo.png" alt = "logo!">	</header>	
+	<section class = "phone-number">
+		<form method="POST" action = "php/registerNumber.php">
+			<p class = "country-code">+91</p>
+			<input type="number" name="number">
+			<p class = "charges-msg">We will send you a verification code.</p>
+			<button type = "submit">
+				<img src="right-arrow-white.png" alt = "submit">
+			</button>
+		</form>
+	</section>	
+</body>
+</html>

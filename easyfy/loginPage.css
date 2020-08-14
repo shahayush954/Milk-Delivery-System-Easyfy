@@ -1,0 +1,73 @@
+
+body{
+	background: #ff7878; /*light-gray*/
+	color: #fff;	/*dim-gray*/
+	font-size: 50px;
+	line-height: 1.6em;
+	margin: 0;
+	padding: 10% 0;
+	text-align: center;
+	font-family: Segoe UI,Frutiger,Frutiger Linotype,Dejavu Sans,Helvetica Neue,Arial,sans-serif;
+}
+
+input{
+	margin: 5% auto;
+	background: none;
+	font-size: 60px;
+	text-align: center;
+	outline: none;
+}
+
+a{
+	position: fixed;
+	left: 15px;
+	top:25px;
+
+}
+
+.main-header{
+	width: 100%;
+}
+
+.main-header img{
+	border-radius: 50%;
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+	height: 500px;
+	width: 500px;
+}
+
+.phone-number input{
+	width: 60%;
+	border: none;
+	border-bottom: 2px solid #fff;
+	color:white;
+	font-size: 60px;
+	text-align: center;
+}
+
+.phone-number .country-code{
+	display: inline;
+	margin: 5% auto;
+	font-size: 60px;
+}
+
+.phone-number .charges-msg{
+	width: 80%;
+	margin: -4% auto;
+	font-size: 40px;
+	line-height: 2em;
+}
+
+.phone-number button{
+	border: 0;
+	background: transparent;
+}
+
+.phone-number button img{
+	border-radius: 50%;
+	height: 150px;
+	margin: 135px;
+	max-width: 150px;
+}
